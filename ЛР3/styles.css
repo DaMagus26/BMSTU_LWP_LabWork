@@ -1,0 +1,160 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(rgba(31, 36, 33, 0.90), rgba(31, 36, 33, 0.90)), url('bmstu_logo_gray.png');
+    background-size: 100px;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
+a, a:visited {
+    color: #216869;
+}
+
+a:hover {
+    color: #49a078;
+}
+
+a:active {
+    color: #9cc5a1;
+}
+
+.text {
+    font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.mark {
+    background-color: #dce1de;
+}
+
+.main-content {
+    padding: 30px 20px;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 7px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 10px 0 30px #222;
+}
+
+.article-header {
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #1f2421;
+}
+
+.divider {
+    margin-bottom: 2rem;
+    background-color: #216869;
+}
+
+.article-text {
+
+    margin-bottom: 1.5rem;
+}
+
+.annotation {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #dce1de;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-left: 5px solid #49a078;
+}
+
+.article-formula {
+    font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-weight: 400;
+    line-height: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.annot-header {
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+
+}
+
+.code-frame {
+    position: relative;
+}
+
+.code-section {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: #1f2421;
+    border-radius: 10px;
+    color: white;
+    overflow-x: scroll;
+}
+
+.code-lang {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    /* right: 10px; */
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: #49a078;
+}
+
+.menu-button {
+    padding: 5px;
+    background: none;
+    border: none;
+    color: white;
+}
+
+.element-tree-overlay {
+    display: inline-block;
+    padding: 10px;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+    position: fixed;
+    color: white;
+    border-radius: 2px;
+    top: 10px;
+    left: 10px;
+    transition: all 2s ease-in-out;
+    overflow: hidden;
+}
+
+.menu-button:active {
+    /* background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)); */
+}
+
+.elemen-tree-overlay-active {
+    width: 200px;
+    max-height: calc(100% - 40px);
+    transition: all 2s ease-in-out;
+}
+
+.overlay-content {
+    font-family: 'YS Text';
+    display: none;
+    max-height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    margin: 15px;
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+}
+
+.overlay-content ul {
+    list-style-type: ' – ';
+    padding-left: 1em;;
+}

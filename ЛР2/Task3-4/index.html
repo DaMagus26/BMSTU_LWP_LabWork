@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICS6 Bootstrap</title>
+    <link href="https://e-learning.bmstu.ru/iu6/pluginfile.php/16891/mod_resource/content/1/bootstrap.min.css"
+        rel="stylesheet">
+    <style>
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        body {
+            margin-bottom: 40px;
+        }
+
+        main {
+            margin-top: 15px;
+        }
+
+        footer {
+            height: 40px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .my-primary {
+            background-color: #030;
+            color: white;
+        }
+
+
+        .text {
+            font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+            font-weight: 400;
+            line-height: 1.5rem;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .mark {
+            background-color: #dce1de;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="row">
+            <div class="col-4">
+                <img src=" https://e-learning.bmstu.ru/iu6/pluginfile.php/7546/mod_folder/content/0/avatar.jpg"
+                    alt="avatar image" width="150" height="150">
+            </div>
+            <div class="col-8">
+                <p class="text">
+                    Линейная регрессия выполняет задачу <span class="bold">прогнозирования</span> значения
+                    зависимой переменной (y) на основе заданной независимой переменной
+                    (x). Таким образом, этот метод регрессии обнаруживает <span class="bold">линейную зависимость</span>
+                    между x (вход) и y (выход). Следовательно, имя является <span class="mark">линейной
+                        регрессией</span>. Если мы построим независимую переменную (x) на оси x и
+                    зависимую переменную (y) на оси y, линейная регрессия даст нам прямую
+                    линию, которая наилучшим образом соответствует точкам данных, как
+                    показано на рисунке ниже.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6 mb-5">
+                <form action="">
+                    <div class="form-group">
+                        <label for="login">Emai:</label>
+                        <input class="form-control" id="login" type="email" name="login" required>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="password">Password:</label>
+                        <input class="form-control" id="password" type="password" name="password" required>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="name">First name:</label>
+                        <input class="form-control" id="name" type="text" name="name" required>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="surename">Surname:</label>
+                        <input class="form-control" id="surename" type="text" name="surename">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="tel">Phone:</label>
+                        <input class="form-control" id="tel" type="tel" name="tel">
+                    </div>
+                    <div class="form-group mt-2">
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-md-6 mb-5">
+                <table class="table table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Currency</th>
+                            <th>Exchange rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>EUR</td>
+                            <td>RUB</td>
+                            <td>65</td>
+                        </tr>
+                        <tr>
+                            <td>USD</td>
+                            <td>RUB</td>
+                            <td>60</td>
+                        </tr>
+                        <tr>
+                            <td>GBP</td>
+                            <td>RUB</td>
+                            <td>69</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+    <footer class="my-primary">
+        <div class="container">
+            <p class="footer-text">Footer</p>
+        </div>
+    </footer>
+</body>
+
+</html>

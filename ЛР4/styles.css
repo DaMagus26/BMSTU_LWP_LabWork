@@ -1,0 +1,70 @@
+/* @import url('//db.onlinewebfonts.com/c/23a02e8af5ef33a9b496dd524401550f?family=YS+Text+Regular'); */
+
+@font-face {
+    font-family: "YS Text Regular";
+    src: url("//db.onlinewebfonts.com/t/23a02e8af5ef33a9b496dd524401550f.eot");
+    /* src: url("//db.onlinewebfonts.com/t/23a02e8af5ef33a9b496dd524401550f.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/23a02e8af5ef33a9b496dd524401550f.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/23a02e8af5ef33a9b496dd524401550f.woff") format("woff"), url("//db.onlinewebfonts.com/t/23a02e8af5ef33a9b496dd524401550f.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/23a02e8af5ef33a9b496dd524401550f.svg#YS Text Regular") format("svg"); */
+    src: url("fonts/@font-face/23a02e8af5ef33a9b496dd524401550f.eot") format("embedded-opentype"), url("fonts/YS\ Text\ Regular\ Regular.woff2") format("woff2"), url("fonts/YS\ Text\ Regular\ Regular.woff") format("woff"), url("fonts/YS\ Text\ Regular\ Regular.ttf") format("truetype"), url("fonts/YS\ Text\ Regular\ Regular.svg") format("svg");
+}
+
+body {
+    background: #eee;
+}
+
+nav {
+    z-index: 3;
+}
+
+.navbar-brand-logo {
+    height: 1.2em;
+}
+
+.navbar-brand-text {
+    font-family: 'YS Text Regular', sans-serif;
+    font-weight: 700;
+}
+
+.spandex {
+    color: #000;
+    text-decoration: none;
+}
+
+.spandex:hover {
+    color: #000;
+}
+
+.spandex:active {
+    color: #000;
+}
+
+.bg-yellow {
+    background-color: #FED42A;
+}
+
+.border-yellow {
+    border-color: #FED42A;
+}
+
+#sidebar {
+    position: fixed;
+    padding-top: 70px;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    max-width: 400px;
+    min-width: 400px;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.content {
+    z-index: 1;
+    padding-top: 70px !important;
+    width: calc(100% - 400px);
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.assortment, .content {
+    overflow-y: scroll;
+}

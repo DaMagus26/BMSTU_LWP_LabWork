@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спандекс.Маркет</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="spandex_logo.png">
+</head>
+
+<body>
+
+    <nav class="navbar bg-light shadow position-fixed w-100">
+        <div class="container-fluid">
+            <div class="navbar-brand" href="#">
+                <img src="spandex_logo.png" alt="logo"
+                    class="d-inline-block mb-1 me-1 align-text-center navbar-brand-logo">
+                <span class="navbar-brand-text"><a class="spandex"
+                        href="https://www.stayer.su/internet-magazin/interesnoe-i-poleznoe/spandeks-chto-eto-za-material.html"
+                        target="_blank">Спандекс</a>.Маркет</span>
+            </div>
+            <form class="d-flex" action="">
+                <input type="search" placeholder="Искать в Спандексе" class="form-control rounded-start border-yellow">
+                <button type="submit" class="btn bg-yellow rounded-end">Найти</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="content p-3">
+        <div class="add-item container bg-white border rounded p-3 mb-3">
+            <h4>Добавить товар:</h4>
+            <form action="">
+                <div class="mb-3">
+                    <label for="name-input">Название позиции</label>
+                    <input type="text" id="name-input" class="form-control" placeholder="Лосины из спандекса" required>
+                </div>
+                <div class="mb-3">
+                    <label for="price-input">Цена (руб.)</label>
+                    <input type="text" id="price-input" class="form-control" required>
+                </div>
+                <button type="button" class="btn bg-yellow" onclick="addToTable(event)">Добавить</button>
+            </form>
+        </div>
+        <div class="assortment container bg-white border rounded p-3 mb-3">
+            <h4>В продаже:</h4>
+            <table class="table" id="goods">
+                <colgroup width="80%"></colgroup>
+                <thead>
+                    <tr class="fw-bold">
+                        <td>Название</td>
+                        <td>Цена (руб.)</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Сортивный топ из спандекса</td>
+                        <td>2500</td>
+                    </tr>
+                    <tr>
+                        <td>Кроссовки из спандекса</td>
+                        <td>7800</td>
+                    </tr>
+                    <tr>
+                        <td>Ортопедический карсет из спандекса</td>
+                        <td>6000</td>
+                    </tr>
+                    <tr>
+                        <td>Надувной слон из спандекса, в натуральную величину</td>
+                        <td>10000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="sidebar" class="container shadom-sm bg-white">
+        <h4 class="h4 mt-5 mt-sm-0">Ваш заказ:</h1>
+            <div class="container my-3" id="cart-container">
+                <div class="row border-bottom py-1 text-muted cart-row-header">
+                    <div class="col-6">Товар</div>
+                    <div class="col-3">Цена (руб.)</div>
+                    <div class="col-3">Кол-во</div>
+                </div>
+                <div class="row border-bottom py-1" id="cart-row-total">
+                    <div class="col-9 fw-bold">Итого:</div>
+                    <div class="col-3 fw-bold" id="total-value">0₽</div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button class="btn bg-yellow" id="count-total">Оформить заказ</button>
+            </div>
+    </div>
+    <script src="cart.js"></script>
+</body>
+
+</html>
