@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа №1</title>
+</head>
+
+<body>
+    <h1>Коротко о линейной регрессии</h1>
+    <p>
+        Линейная регрессия выполняет задачу <i>прогнозирования</i> значения <br />
+        зависимой переменной (y) на основе заданной независимой переменной <br />
+        (x). Таким образом, этот метод регрессии обнаруживает <i>линейную зависимость</i> <br />
+        между x (вход) и y (выход). Следовательно, имя является <mark>линейной <br />
+            регрессией</mark>. Если мы построим независимую переменную (x) на оси x и <br />
+        зависимую переменную (y) на оси y, линейная регрессия даст нам прямую <br />
+        линию, которая наилучшим образом соответствует точкам данных, как <br />
+        показано на рисунке ниже.
+    </p>
+    <details>
+        <summary>Уравнение линейной регрессии:</summary>
+        <p><var>Y</var> = <var>w<sub>0</sub></var> + <var>w<sub>1</sub></var><var>x<sub>1</sub></var> + ... +
+            <var>w<sub>n</sub></var><var>x<sub>n</sub></var>
+        <p>Где <var>w<sub>0</sub></var> - свободный член (bias, смещение), <var>x<sub>i</sub></var> - i-е измерение.</p>
+    </details>
+
+    <p>
+        <a target="_blank" href="https://drive.google.com/open?id=1fiHg5DyvQeRC4SyhsVnje5dhJNyVWpO1">Набор данных</a>
+        содержит информацию о погодных условиях, записываемых каждый день <br />
+        на различных метеостанциях по всему миру. Информация включает в себя осадки, снегопад, <br />
+        температуру, скорость ветра, а также то, были ли в этот день грозы или другие плохие <br />
+        погодные условия. Поэтому наша задача - <i>предсказать максимальную температуру</i>, принимая <br />
+        входную функцию за минимальную температуру.
+        Давайте начнем реализацию:
+    </p>
+    <pre>
+        <code>
+    import pandas as pd  
+    import numpy as np  
+    import matplotlib.pyplot as plt  
+    import seaborn as seabornInstance 
+    from sklearn.model_selection import train_test_split 
+    from sklearn.linear_model import LinearRegression
+    from sklearn import metrics
+    
+    dataset = pd.read_csv('/Users/nageshsinghchauhan/Documents/projects/ML/ML_BLOG_LInearRegression/Weather.csv')
+    X = dataset['MinTemp'].values.reshape(-1,1)
+    y = dataset['MaxTemp'].values.reshape(-1,1)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+
+    regressor = LinearRegression()  
+    regressor.fit(X_train, y_train) #training the algorithm
+    #To retrieve the intercept:
+    print(regressor.intercept_)#For retrieving the slope:
+    print(regressor.coef_)
+        </code>
+    </pre>
+    <cite><a target="_blank" href="https://machinelearningmastery.ru/a-beginners-guide-to-linear-regression-in-python-with-scikit-learn-83a8f7ae2b4f/">© "Machine Learning Mastery"</a></cite>
+</body>
+
+</html>
